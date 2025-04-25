@@ -4,7 +4,7 @@ import router from './routes';
 import { Alert, Flex, Spin } from 'antd';
 import { useOnChangeValue } from 'ask-hooks';
 import '@/styles/global.css'
-
+import BannerAlert from './utils/auto';
 
 const { ErrorBoundary } = Alert;
 
@@ -12,7 +12,7 @@ const root = document.querySelector('#root');
 
 const Root = () => {
 
-  const [loading] = useOnChangeValue(true)
+  const [loading] = useOnChangeValue(false)
 
   if (loading.value) {
     return (
