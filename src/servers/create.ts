@@ -1,7 +1,13 @@
 import axios from "axios";
 
 const url: Record<string, string> = {
+  /**
+   * 开发环境服务器地址
+  */
   development: import.meta.env.VITE_DEVELOPMENT_URL,
+  /**
+   * 线上环境服务器地址
+  */
   production: import.meta.env.VITE_PRODUCTION_URL,
 };
 

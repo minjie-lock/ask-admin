@@ -9,6 +9,9 @@ type DialogFn<R> = {
   onReslove: (value: unknown) => void;
 }
 
+
+type Options = Parameters<ModalFuncWithPromise>[0];
+
 const Dialog = forwardRef((props: ModalProps, ref) => {
 
   const {
@@ -55,9 +58,6 @@ export function useDialogOpen<R>()  {
   const dialog = useRef<DialogFn<R>>(null);
   return dialog;
 };
-
-
-type Options = Parameters<ModalFuncWithPromise>[0];
 
 export const useDialog = (): [HookAPI, React.ReactNode] => {
 
